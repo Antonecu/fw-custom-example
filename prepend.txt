@@ -8,6 +8,7 @@
 #define ts_show_hip9011 true
 #define show_tcu_gauges true
 #define MAX_TPS_PPS_DISCREPANCY 10
+#define show_test_presets true
 
 ! board has zero LEDs
 #define ts_show_status_leds false
