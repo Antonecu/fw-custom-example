@@ -24,6 +24,9 @@ static void setSdCardSpi3() {
 
 // board-specific configuration setup
 void setBoardDefaultConfiguration() {
+
+	setSdCardSpi3();
+	
 //      engineConfiguration->injectionPins[0] = Gpio::F13;
 //      engineConfiguration->ignitionPins[0] = Gpio::E15;
 
@@ -36,19 +39,15 @@ void setBoardDefaultConfiguration() {
 
 //	engineConfiguration->iat.adcChannel = EFI_ADC_2;
 
-
 // same 470 and 910 on all analog inputs
    	engineConfiguration->analogInputDividerCoefficient = 1.55f;
 	engineConfiguration->adcVcc = 3.3f;
 
-	setSdCardSpi3();
+// 6.34k high side/ 1k low side
+    	engineConfiguration->vbattDividerCoeff = (6.34 + 1) / 1;
 
-    	// 6.34k high side/ 1k low side
-//    	engineConfiguration->vbattDividerCoeff = (6.34 + 1) / 1;
-
-//	engineConfiguration->clt.config.bias_resistor = 2490;
-//	engineConfiguration->iat.config.bias_resistor = 2490;
-
+	engineConfiguration->clt.config.bias_resistor = 2490;
+	engineConfiguration->iat.config.bias_resistor = 2490;
 
 // Battery sense on PA0
 	engineConfiguration->vbattAdcChannel = EFI_ADC_0;
