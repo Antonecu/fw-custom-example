@@ -1003,7 +1003,7 @@
         <constant digits="0" name="etbRevLimitRange" units="rpm">250.0</constant>
         <constant digits="0" name="etbRevLimitStart" units="rpm">0.0</constant>
         <constant name="EtbSentInput">"None"</constant>
-        <constant digits="1" name="etbSplit" units="%">10.0</constant>
+        <constant digits="1" name="etbSplit" units="%">5.0</constant>
         <constant digits="4" name="etbWastegatePid_dFactor" units="">0.0</constant>
         <constant digits="4" name="etbWastegatePid_iFactor" units="">0.0</constant>
         <constant digits="0" name="etbWastegatePid_maxValue" units="">60.0</constant>
@@ -4888,7 +4888,7 @@ end</constant>
 </constant>
         <constant name="yesUnderstandLocking">"no"</constant>
     </page>
-    <versionInfo firmwareInfo="20250221" nPages="1" signature="rusEFI main.2025.02.25.EECV.2228615616" version="5.0"/>
+    <versionInfo firmwareInfo="20250221" nPages="1" signature="rusEFI main.2025.02.25.EECV.172464004" version="5.0"/>
     <bibliography author="rusEFI 20250221" writeDate="date"/>
     <settings/>
     <userComments/>
