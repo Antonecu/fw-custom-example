@@ -51,4 +51,9 @@ void setBoardDefaultConfiguration() {
 
 // Battery sense on PA0
 	engineConfiguration->vbattAdcChannel = EFI_ADC_0;
+
+//CAN 1 bus overwrites
+	engineConfiguration->canRxPin = Gpio::D0;
+	engineConfiguration->canTxPin = Gpio::D1;
+	
 }
