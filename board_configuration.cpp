@@ -25,7 +25,7 @@ static void setSdCardSpi3() {
 // board-specific configuration setup
 void setBoardDefaultConfiguration() {
 
-	setSdCardSpi3();
+//	setSdCardSpi3();
 	
 //      engineConfiguration->injectionPins[0] = Gpio::F13;
 //      engineConfiguration->ignitionPins[0] = Gpio::E15;
