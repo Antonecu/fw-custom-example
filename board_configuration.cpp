@@ -90,7 +90,7 @@ void setBoardDefaultConfiguration() {
 //Low Side Outputs 
 	engineConfiguration->fuelPumpPin = Gpio::E3;
 	engineConfiguration->fanPin = Gpio::E6;
-	engineConfiguration->fan2Pin = Gpio::E6;
+	engineConfiguration->fan2Pin = Gpio::D15;
 	engineConfiguration->tachOutputPin = Gpio::C13;
 	engineConfiguration->mainRelayPin = Gpio::Unassigned;
         engineConfiguration->boostControlPin = Gpio::Unassigned;
