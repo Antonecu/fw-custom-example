@@ -4,6 +4,76 @@
 #pragma once
 
 Gpio GENERATED_OUTPUTS = {
-	Gpio::B14, // B14 Output
-// "B14 Output",
+	Gpio::E8, // IGN1 (PE8)
+	Gpio::E9, // IGN2 (PE9)
+	Gpio::E10, // IGN3  (PE10)
+	Gpio::E11, // IGN4 (PE11)
+	Gpio::D13, // INJ1 (PD13)
+	Gpio::D12, // INJ2 (PD12)
+	Gpio::D11, // INJ3 (PD11)
+	Gpio::D10, // INJ4 (PD10)
+	Gpio::E3, // PUMP (PE3)
+	Gpio::E6, // FAN (PE6)
+	Gpio::C13, // TACHO (PC13)
+	Gpio::D14, // D7 (PD14)
+	Gpio::D15, // D6 (PD15)
+	Gpio::C6, // IDLE (PC6)
+	Gpio::C7, // D4 (PC7)
+	Gpio::D7, // D46 (PD7)
+	Gpio::D8, // D21 (PD8)
+	Gpio::D9, // D44 (PD9)
+	Gpio::D5, // TX2 (PD5)
+	Gpio::D6, // RX2 (PD6)
+	Gpio::B6, // PB6
+	Gpio::B7, // PB7
+	Gpio::B8, // PB8
+	Gpio::B15, // PB15
+	Gpio::E12, // PE12
+	Gpio::E13, // PE13
+	Gpio::E14, // PE14
+	Gpio::E15, // PE15
+	Gpio::C8, // PC8
+	Gpio::C9, // PC9
+	Gpio::A15, // SPI1 FLASH (PA15)
+	Gpio::B3, // SPI1 FLASH (PB3)
+	Gpio::B5, // SPI1 FLASH (PB5)
+	Gpio::B10, // PB10
+	Gpio::B11, // PB11
+	Gpio::D4, // PD4
+// "IGN1 (PE8)",
+// "IGN2 (PE9)",
+// "IGN3  (PE10)",
+// "IGN4 (PE11)",
+// "INJ1 (PD13)",
+// "INJ2 (PD12)",
+// "INJ3 (PD11)",
+// "INJ4 (PD10)",
+// "PUMP (PE3)",
+// "FAN (PE6)",
+// "TACHO (PC13)",
+// "D7 (PD14)",
+// "D6 (PD15)",
+// "IDLE (PC6)",
+// "D4 (PC7)",
+// "D46 (PD7)",
+// "D21 (PD8)",
+// "D44 (PD9)",
+// "TX2 (PD5)",
+// "RX2 (PD6)",
+// "PB6",
+// "PB7",
+// "PB8",
+// "PB15",
+// "PE12",
+// "PE13",
+// "PE14",
+// "PE15",
+// "PC8",
+// "PC9",
+// "SPI1 FLASH (PA15)",
+// "SPI1 FLASH (PB3)",
+// "SPI1 FLASH (PB5)",
+// "PB10",
+// "PB11",
+// "PD4",
 }
