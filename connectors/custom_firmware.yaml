@@ -20,11 +20,11 @@ pins:
   - id: EFI_ADC_4
     class: analog_inputs
     ts_name: FUELPRESS (PA4)
-  
-  - id: A5
-    class: [switch_inputs, event_inputs]
-    ts_name: VSS (PA5)
 
+  - id: EFI_ADC_5
+    class: analog_inputs
+    ts_name: PA5
+    
   - id: EFI_ADC_6
     class: analog_inputs
     ts_name: OILPRESS (PA6)
@@ -109,6 +109,10 @@ pins:
     class: [switch_inputs, event_inputs]
     ts_name: ACPRESS (PE2)
 
+  - id: [E3, E3]
+    class: [switch_inputs, event_inputs]
+    ts_name: VSS (PD3)
+    
   - id: [E4, E4]
     class: [switch_inputs, event_inputs]
     ts_name: CLUTCH (PE4)
