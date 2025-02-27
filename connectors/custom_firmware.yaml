@@ -105,13 +105,9 @@ pins:
     class: [switch_inputs, event_inputs]
     ts_name: CMP (PE1)
 
-    - id: [E2, E2]
+  - id: [E2, E2]
     class: [switch_inputs, event_inputs]
     ts_name: ACPRESS (PE2)
-    
-  - id: E3
-    class: outputs
-    ts_name: PUMP (PE3)
 
   - id: [E4, E4]
     class: [switch_inputs, event_inputs]
@@ -120,10 +116,6 @@ pins:
   - id: [E5, E5]
     class: [switch_inputs, event_inputs]
     ts_name: PSP (PE5)
-    
-  - id: E6
-    class: outputs
-    ts_name: FAN (PE6)
 
   - id: [E7, E7]
     class: [switch_inputs, event_inputs]
@@ -133,37 +125,13 @@ pins:
     class: [switch_inputs, event_inputs]
     ts_name: D42 (PA8)
     
-  - id: [E12, E12, E12]
-    class: [outputs, switch_inputs, event_inputs]
-    ts_name: PE12
-
-  - id: [E13, E13, E13]
-    class: [outputs, switch_inputs, event_inputs]
-    ts_name: PE13
-
-  - id: [E14, E14, E14]
-    class: [outputs, switch_inputs, event_inputs]
-    ts_name: PE14
-
-  - id: [E15, E15, E15]
-    class: [outputs, switch_inputs, event_inputs]
-    ts_name: PE15
-
-  - id: [B6, B6, B6]
-    class: [outputs, switch_inputs, event_inputs]
-    ts_name: PB6
-
-  - id: B7
+  - id: E3
     class: outputs
-    ts_name: PB7
-
-  - id: B8
+    ts_name: PUMP (PE3)
+    
+  - id: E6
     class: outputs
-    ts_name: PB8
-
-  - id: [B9, B9, B9]
-    class: [outputs, switch_inputs, event_inputs]
-    ts_name: PB9
+    ts_name: FAN (PE6)
     
   - id: C13
     class: outputs
@@ -209,6 +177,38 @@ pins:
     class: [outputs, switch_inputs, event_inputs]
     ts_name: RX2 (PD6)
 
+  - id: [B6, B6, B6]
+    class: [outputs, switch_inputs, event_inputs]
+    ts_name: PB6
+    
+  - id: B7
+    class: outputs
+    ts_name: PB7
+
+  - id: B8
+    class: outputs
+    ts_name: PB8
+
+  - id: [B9, B9, B9]
+    class: [outputs, switch_inputs, event_inputs]
+    ts_name: PB9
+    
+  - id: [E12, E12, E12]
+    class: [outputs, switch_inputs, event_inputs]
+    ts_name: PE12
+
+  - id: [E13, E13, E13]
+    class: [outputs, switch_inputs, event_inputs]
+    ts_name: PE13
+
+  - id: [E14, E14, E14]
+    class: [outputs, switch_inputs, event_inputs]
+    ts_name: PE14
+
+  - id: [E15, E15, E15]
+    class: [outputs, switch_inputs, event_inputs]
+    ts_name: PE15
+    
   - id: C8
     class: outputs
     ts_name: PC8
@@ -240,3 +240,4 @@ pins:
   - id: B11
     class: outputs
     ts_name: PB11
+
