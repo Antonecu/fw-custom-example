@@ -181,21 +181,17 @@ pins:
     class: [outputs, switch_inputs, event_inputs]
     ts_name: RX2 (PD6)
 
-  - id: [B6, B6, B6]
-    class: [outputs, switch_inputs, event_inputs]
-    ts_name: PB6
-    
-  - id: B7
-    class: outputs
-    ts_name: PB7
-
-  - id: B8
-    class: outputs
-    ts_name: PB8
-
   - id: [B15, B15, B15]
     class: [outputs, switch_inputs, event_inputs]
     ts_name: PB15
+
+  - id: [B10, B10, B10]
+    class: [outputs, switch_inputs, event_inputs]
+    ts_name: TX3 (PB10)
+
+  - id: [B11, B11, B11]
+    class: [outputs, switch_inputs, event_inputs]
+    ts_name: RX3 (PB11)
     
   - id: [E12, E12, E12]
     class: [outputs, switch_inputs, event_inputs]
@@ -237,10 +233,14 @@ pins:
     class: outputs
     ts_name: SPI1 FLASH (PB5)
 
-  - id: B10
+  - id: B6
     class: outputs
-    ts_name: TX3 (PB10)
+    ts_name: PB6
+    
+  - id: B7
+    class: outputs
+    ts_name: PB7
 
-  - id: B11
+  - id: B8
     class: outputs
-    ts_name: RX3 (PB11)
+    ts_name: PB8
