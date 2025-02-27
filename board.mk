@@ -10,7 +10,7 @@ include $(BOARD_DIR)/meta-info.env
 DDEFS += -DSTM32F407xx
 
 # reduce memory usage monitoring
-DDEFS += -DRAM_UNUSED_SIZE=200
+DDEFS += -DRAM_UNUSED_SIZE=100
 
 DDEFS += -DSTM32_ADC_USE_ADC3=TRUE
 # todo: make knock pin software-selectable?
