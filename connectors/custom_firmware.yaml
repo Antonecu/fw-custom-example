@@ -221,6 +221,10 @@ pins:
     class: outputs
     ts_name: PC9
 
+  - id: D4
+    class: outputs
+    ts_name: PD4
+    
   - id: A15
     class: outputs
     ts_name: SPI1 FLASH (PA15)
@@ -235,12 +239,8 @@ pins:
 
   - id: B10
     class: outputs
-    ts_name: PB10
+    ts_name: TX3 (PB10)
 
   - id: B11
     class: outputs
-    ts_name: PB11
-
-  - id: D4
-    class: outputs
-    ts_name: PD4
+    ts_name: RX3 (PB11)
