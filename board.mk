@@ -6,8 +6,15 @@ BOARDINC += $(BOARD_DIR)/generated/controllers/generated
 # defines SHORT_BOARD_NAME
 include $(BOARD_DIR)/meta-info.env
 
+# MCU defines
+DDEFS += -DSTM32F407xx
+
 # reduce memory usage monitoring
-DDEFS += -DRAM_UNUSED_SIZE=100
+DDEFS += -DRAM_UNUSED_SIZE=200
+
+DDEFS += -DSTM32_ADC_USE_ADC3=TRUE
+# todo: make knock pin software-selectable?
+DDEFS += -DEFI_SOFTWARE_KNOCK=TRUE -DSTM32_ADC_USE_ADC3=TRUE
 
 # assign critical LED to a non-existent pin if you do not have it on your board
 # good old PD14 is still the default value
