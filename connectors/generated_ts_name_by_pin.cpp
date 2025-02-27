@@ -8,8 +8,8 @@ const char * getBoardSpecificPinName(brain_pin_e brainPin) {
 	switch(brainPin) {
 		case Gpio::A15: return "SPI1 FLASH (PA15)";
 		case Gpio::A8: return "D42 (PA8)";
-		case Gpio::B10: return "PB10";
-		case Gpio::B11: return "PB11";
+		case Gpio::B10: return "TX3 (PB10)";
+		case Gpio::B11: return "RX3 (PB11)";
 		case Gpio::B15: return "PB15";
 		case Gpio::B3: return "SPI1 FLASH (PB3)";
 		case Gpio::B5: return "SPI1 FLASH (PB5)";
