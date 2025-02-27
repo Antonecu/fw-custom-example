@@ -109,7 +109,7 @@ pins:
     class: [switch_inputs, event_inputs]
     ts_name: ACPRESS (PE2)
 
-  - id: [E3, E3]
+  - id: [D3, D3]
     class: [switch_inputs, event_inputs]
     ts_name: VSS (PD3)
     
