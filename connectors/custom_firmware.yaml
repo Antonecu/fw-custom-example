@@ -1,81 +1,210 @@
 pins:
-  - id: B14
-    class: outputs
-    ts_name: B14 Output
-
+    
   - id: EFI_ADC_0
     class: analog_inputs
 # getAdcChannelBrainPin in 'stm32_adc.cpp' says EFI_ADC_0 is PA0
-    ts_name: On-board Battery Sense (A0)
+    ts_name: PA0
 
   - id: EFI_ADC_1
     class: analog_inputs
-    ts_name: Analog Inputs 1 (A1)
-
+    ts_name: PA1
+    
   - id: EFI_ADC_2
     class: analog_inputs
-    ts_name: Analog Inputs 2 (A2)
+    ts_name: O2 (PA2)
 
   - id: EFI_ADC_3
     class: analog_inputs
-    ts_name: Analog Inputs 3 (A3)
+    ts_name: KNOCK (PA3)
 
   - id: EFI_ADC_4
     class: analog_inputs
-    ts_name: Analog Inputs 4 (A4)
-
-  - id: EFI_ADC_5
-    class: analog_inputs
-    ts_name: On-board MAP (A5)
+    ts_name: FUELPRESS (PA4)
+  
+  - id: A5
+    class: [switch_inputs, event_inputs]
+    ts_name: VSS (PA5)
 
   - id: EFI_ADC_6
     class: analog_inputs
-    ts_name: Analog Inputs 6 (A6)
+    ts_name: OILPRESS (PA6)
 
   - id: EFI_ADC_7
     class: analog_inputs
-    ts_name: Analog Inputs 7 (A7)
-
+    ts_name: IAT (PA7)
+    
   - id: EFI_ADC_8
     class: analog_inputs
-    ts_name: On-board BARO (B0)
+    ts_name: A15 (PB0)
 
   - id: EFI_ADC_9
     class: analog_inputs
-    ts_name: Analog Inputs 9 (B1)
+    ts_name: PB1
 
   - id: EFI_ADC_10
     class: analog_inputs
-    ts_name: Analog Inputs 10 (C0)
-
+    ts_name: CLT (PC0)
+    
   - id: EFI_ADC_11
     class: analog_inputs
-    ts_name: Primary On-board O2 (C1)
+    ts_name: TPS (PC1)
 
   - id: EFI_ADC_12
     class: analog_inputs
-    ts_name: Secondary On-board O2 (C2)
+    ts_name: MAP (PC2)
 
   - id: EFI_ADC_13
     class: analog_inputs
-    ts_name: Analog Inputs 13 (C3)
-
+    ts_name: VBAT (PC3)
+    
   - id: EFI_ADC_14
     class: analog_inputs
-    ts_name: Analog Inputs 14 (C4)
+    ts_name: A14 (PC4)
 
   - id: EFI_ADC_15
     class: analog_inputs
-    ts_name: Analog Inputs 15 (C5)
+    ts_name: PC5
+    
+  - id: E8
+    class: outputs
+    ts_name: IGN1 (PE8)
 
-  - id: [E2, E2]
-    class: [switch_inputs, event_inputs]
-    ts_name: VR/Hall 1 (E2)
+  - id: E9
+    class: outputs
+    ts_name: IGN2 (PE9)
 
-  - id: [E3, E3]
+  - id: E10
+    class: outputs
+    ts_name: IGN3  (PE10)
+
+  - id: E11
+    class: outputs
+    ts_name: IGN4 (PE11)
+
+  - id: D13
+    class: outputs
+    ts_name: INJ1 (PD13)
+
+  - id: D12
+    class: outputs
+    ts_name: INJ2 (PD12)
+
+  - id: D11
+    class: outputs
+    ts_name: INJ3 (PD11)
+
+  - id: D10
+    class: outputs
+    ts_name: INJ4 (PD10)
+
+  - id: [E0, E0]
     class: [switch_inputs, event_inputs]
-    ts_name: VR/Hall 2 (E3)
+    ts_name: CKP (PE0)
+    
+  - id: [E1, E1]
+    class: [switch_inputs, event_inputs]
+    ts_name: CMP (PE1)
+
+    - id: [E2, E2]
+    class: [switch_inputs, event_inputs]
+    ts_name: ACPRESS (PE2)
+    
+  - id: E3
+    class: outputs
+    ts_name: PUMP (PE3)
 
   - id: [E4, E4]
     class: [switch_inputs, event_inputs]
-    ts_name: VR/Hall 3 (E4)
+    ts_name: CLUTCH (PE4)
+
+  - id: [E5, E5]
+    class: [switch_inputs, event_inputs]
+    ts_name: PSP (PE5)
+    
+  - id: E6
+    class: outputs
+    ts_name: FAN (PE6)
+
+  - id: [E7, E7]
+    class: [switch_inputs, event_inputs]
+    ts_name: ACSW (PE7)
+
+  - id: [A8, A8]
+    class: [switch_inputs, event_inputs]
+    ts_name: D42 (PA8)
+    
+  - id: [E12, E12, E12]
+    class: [outputs, switch_inputs, event_inputs]
+    ts_name: PE12
+
+  - id: [E13, E13, E13]
+    class: [outputs, switch_inputs, event_inputs]
+    ts_name: PE13
+
+  - id: [E14, E14, E14]
+    class: [outputs, switch_inputs, event_inputs]
+    ts_name: PE14
+
+  - id: [E15, E15, E15]
+    class: [outputs, switch_inputs, event_inputs]
+    ts_name: PE15
+
+  - id: [B6, B6, B6]
+    class: [outputs, switch_inputs, event_inputs]
+    ts_name: PB6
+
+  - id: B7
+    class: outputs
+    ts_name: PB7
+
+  - id: B8
+    class: outputs
+    ts_name: PB8
+
+  - id: [B9, B9, B9]
+    class: [outputs, switch_inputs, event_inputs]
+    ts_name: PB9
+    
+  - id: C13
+    class: outputs
+    ts_name: TACHO (PC13)
+
+  - id: D14
+    class: outputs
+    ts_name: D7 (PD14)
+
+  - id: D15
+    class: outputs
+    ts_name: D6 (PD15)
+
+  - id: C6
+    class: outputs
+    ts_name: IDLE (PC6)
+    
+  - id: C7
+    class: outputs
+    ts_name: D4 (PC7)
+
+  - id: D7
+    class: outputs
+    ts_name: D46 (PD7)
+
+  - id: D8
+    class: outputs
+    ts_name: D21 (PD8)
+    
+  - id: D9
+    class: outputs
+    ts_name: D44 (PD9)
+
+  - id: [D4, D4]
+    class: [switch_inputs, event_inputs]
+    ts_name: FlexFuel (PD4)
+    
+  - id: [D5, D5, D5]
+    class: [outputs, switch_inputs, event_inputs]
+    ts_name: USART-TX (PD5)
+
+  - id: [D6, D6, D6]
+    class: [outputs, switch_inputs, event_inputs]
+    ts_name: USART-RX (PD6)
