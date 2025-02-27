@@ -42,6 +42,33 @@ static void setSensorPins() {
 //    	engineConfiguration->baroSensor.hwChannel = EFI_ADC_15;
 }
 
+static void setEtbConfig() {
+	// TLE9201 driver
+	// This chip has three control pins:
+	// DIR - sets direction of the motor
+	// PWM - pwm control (enable high, coast low)
+	// DIS - disables motor (enable low)
+
+	// Throttle #1
+	// PWM pin
+	engineConfiguration->etbIo[0].controlPin = Gpio::Unassigned;
+	// DIR pin
+	engineConfiguration->etbIo[0].directionPin1 = Gpio::Unassigned;
+	// Disable pin
+	engineConfiguration->etbIo[0].disablePin = Gpio::Unassigned;
+
+	// Throttle #2
+	// PWM pin
+	engineConfiguration->etbIo[1].controlPin = Gpio::Unassigned;
+	// DIR pin
+	engineConfiguration->etbIo[1].directionPin1 = Gpio::Unassigned;
+	// Disable pin
+	engineConfiguration->etbIo[1].disablePin = Gpio::Unassigned;
+
+	// we only have pwm/dir, no dira/dirb
+	engineConfiguration->etb_use_two_wires = false;
+}
+
 static void setupVbatt() {
 	// 470 high side/ 910 low side
 	engineConfiguration->analogInputDividerCoefficient = 1.55f;
@@ -70,6 +97,7 @@ void setBoardDefaultConfiguration() {
 	setInjectorPins();
 	setIgnitionPins();
 	setSensorPins();
+	setEtbConfig();
 	setupVbatt();
 	setSdCardSpi3();
 	
