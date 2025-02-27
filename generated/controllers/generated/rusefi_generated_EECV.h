@@ -1379,14 +1379,10 @@
 #define SentInput_INPUT6 6
 #define SentInput_INPUT7 7
 #define SentInput_NONE 0
-#define show_Frankenso_presets false
-#define show_Hellen_presets false
-#define show_microRusEFI_presets false
-#define show_Proteus_presets false
 #define show_tcu_gauges true
 #define show_test_presets true
 #define show_vvt_output_pin true
-#define SIGNATURE_HASH 1717860763
+#define SIGNATURE_HASH 1581032485
 #define SIMULATOR_TUNE_BIN_FILE_NAME "generated/simulator_tune_image.bin"
 #define SIMULATOR_TUNE_BIN_FILE_NAME_PREFIX "generated/simulator_tune_image"
 #define SIMULATOR_TUNE_BIN_FILE_NAME_SUFFIX ".bin"
@@ -1712,7 +1708,7 @@
 #define ts_show_brake_pedal_indicator true
 #define ts_show_brake_pedal_pin true
 #define ts_show_cam2 true
-#define ts_show_can2 true
+#define ts_show_can2 false
 #define ts_show_can_bitrate true
 #define ts_show_can_pins true
 #define ts_show_can_wbo true
@@ -1751,6 +1747,7 @@
 #define ts_show_exhaust_vvt true
 #define ts_show_experimental true
 #define ts_show_fan2_settings true
+#define ts_show_fancy_hardware false
 #define ts_show_faster_spin_up true
 #define ts_show_final_ratio true
 #define ts_show_firing_order true
@@ -1783,7 +1780,7 @@
 #define ts_show_gdi false
 #define ts_show_gdi_low_level true
 #define ts_show_globalTriggerAngleOffset true
-#define ts_show_hardware_simulator true
+#define ts_show_hardware_simulator false
 #define ts_show_hbridge_function true
 #define ts_show_hd true
 #define ts_show_hip9011 false
@@ -1827,7 +1824,7 @@
 #define ts_show_sent true
 #define ts_show_software_knock true
 #define ts_show_speedo_settings true
-#define ts_show_spi true
+#define ts_show_spi false
 #define ts_show_spi1_enable true
 #define ts_show_spi1_pins true
 #define ts_show_spi2_enable true
@@ -1877,7 +1874,7 @@
 #define ts_show_wastegate_sensor true
 #define ts_show_wbo_canbus_index true
 #define ts_show_wbo_canbus_set_index true
-#define TS_SIGNATURE "rusEFI main.2025.02.27.EECV.1717860763"
+#define TS_SIGNATURE "rusEFI main.2025.02.27.EECV.1581032485"
 #define TS_SIMULATE_CAN '>'
 #define TS_SIMULATE_CAN_char >
 #define TS_SINGLE_WRITE_COMMAND 'W'
