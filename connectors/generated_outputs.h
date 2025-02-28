@@ -24,22 +24,17 @@ Gpio GENERATED_OUTPUTS = {
 	Gpio::D9, // D44 (PD9)
 	Gpio::D5, // TX2 (PD5)
 	Gpio::D6, // RX2 (PD6)
-	Gpio::B15, // PB15
-	Gpio::B10, // TX3 (PB10)
-	Gpio::B11, // RX3 (PB11)
+	Gpio::B10, // PB10
+	Gpio::B11, // PB11
 	Gpio::E12, // PE12
 	Gpio::E13, // PE13
 	Gpio::E14, // PE14
 	Gpio::E15, // PE15
-	Gpio::C8, // PC8
-	Gpio::C9, // PC9
 	Gpio::D4, // PD4
-	Gpio::A15, // SPI1 FLASH (PA15)
-	Gpio::B3, // SPI1 FLASH (PB3)
-	Gpio::B5, // SPI1 FLASH (PB5)
 	Gpio::B6, // PB6
 	Gpio::B7, // PB7
 	Gpio::B8, // PB8
+	Gpio::B15, // PB15
 // "IGN1 (PE8)",
 // "IGN2 (PE9)",
 // "IGN3  (PE10)",
@@ -60,20 +55,15 @@ Gpio GENERATED_OUTPUTS = {
 // "D44 (PD9)",
 // "TX2 (PD5)",
 // "RX2 (PD6)",
-// "PB15",
-// "TX3 (PB10)",
-// "RX3 (PB11)",
+// "PB10",
+// "PB11",
 // "PE12",
 // "PE13",
 // "PE14",
 // "PE15",
-// "PC8",
-// "PC9",
 // "PD4",
-// "SPI1 FLASH (PA15)",
-// "SPI1 FLASH (PB3)",
-// "SPI1 FLASH (PB5)",
 // "PB6",
 // "PB7",
 // "PB8",
+// "PB15",
 }
