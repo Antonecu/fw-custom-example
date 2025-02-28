@@ -6,6 +6,8 @@ BOARDINC += $(BOARD_DIR)/generated/controllers/generated
 # defines SHORT_BOARD_NAME
 include $(BOARD_DIR)/meta-info.env
 
+DDEFS += -DEFI_MAIN_RELAY_CONTROL=FALSE
+
 # MCU defines
 DDEFS += -DSTM32F407xx
 
