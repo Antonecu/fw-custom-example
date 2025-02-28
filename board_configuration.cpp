@@ -40,6 +40,8 @@ static void setSensorPins() {
         engineConfiguration->camInputs[0] = Gpio::E1;
 	engineConfiguration->camInputs[1] = Gpio::Unassigned;
 	engineConfiguration->vehicleSpeedSensorInputPin = Gpio::A5;
+	engineConfiguration->lps25BaroSensorScl = Gpio::B10;
+	engineConfiguration->lps25BaroSensorSda = Gpio::B11;
 //	engineConfiguration->baroSensor.type = MT_MPXH6400;
 //    	engineConfiguration->baroSensor.hwChannel = EFI_ADC_15;
 }
@@ -109,7 +111,13 @@ void setBoardDefaultConfiguration() {
 	engineConfiguration->globalTriggerAngleOffset = 0;
 
 	engineConfiguration->enableSoftwareKnock = true;
+	engineConfiguration->cylindersCount = 4;
+	engineConfiguration->firingOrder = FO_1_2_4_3;
 
+	engineConfiguration->ignitionMode = IM_WASTED_SPARK;
+	engineConfiguration->crankingInjectionMode = IM_SIMULTANEOUS;
+	engineConfiguration->injectionMode = IM_SEQUENTIAL;
+	
 //Digital Input
 	engineConfiguration->acSwitch = Gpio::E7;
 	engineConfiguration->clutchDownPin = Gpio::E4;
