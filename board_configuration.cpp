@@ -59,16 +59,6 @@ static void setupVbatt() {
 	engineConfiguration->adcVcc = 3.3f;
 }
 
-static void setSdCardSpi3() {
-        engineConfiguration->isSdCardEnabled = true;
-	engineConfiguration->sdCardSpiDevice = SPI_DEVICE_3;
-	engineConfiguration->spi3mosiPin = Gpio::C12;
-	engineConfiguration->spi3misoPin = Gpio::C11;
-	engineConfiguration->spi3sckPin = Gpio::C10;
-	engineConfiguration->is_enabled_spi_3 = true;
-	engineConfiguration->sdCardCsPin = Gpio::D2;
-}
-
 static void setSdCardSDIO() {
 	#undef EFI_SDC_DEVICE
 	#define EFI_SDC_DEVICE SDCD1
@@ -98,7 +88,7 @@ void setBoardDefaultConfiguration() {
 	engineConfiguration->ignitionMode = IM_WASTED_SPARK;
 	engineConfiguration->crankingInjectionMode = IM_SIMULTANEOUS;
 	engineConfiguration->injectionMode = IM_SEQUENTIAL;
-	engineConfiguration->globalTriggerAngleOffset = -85;
+	engineConfiguration->globalTriggerAngleOffset = 0;
 	engineConfiguration->displacement = 1.596;
 	engineConfiguration->injector.flow = 165;
         engineConfiguration->cranking.baseFuel = 25;
