@@ -97,7 +97,7 @@ static void setSdCardSpi3() {
 // board-specific configuration setup
 void setBoardDefaultConfiguration() {
 	setInjectorPins();
-	setIgnitionPins();
+//	setIgnitionPins();
 	setSensorPins();
 	setEtbConfig();
 	setupVbatt();
@@ -123,9 +123,16 @@ void setBoardDefaultConfiguration() {
 	engineConfiguration->fan2Pin = Gpio::D15;
 	engineConfiguration->tachOutputPin = Gpio::C13;
 	engineConfiguration->mainRelayPin = Gpio::Unassigned;
+	engineConfiguration->acRelayPin = Gpio::Unassigned;
         engineConfiguration->boostControlPin = Gpio::Unassigned;
 	engineConfiguration->vvtPins[0] = Gpio::Unassigned;
 	engineConfiguration->vvtPins[1] = Gpio::Unassigned;
+
+// Idle configuration
+	engineConfiguration->useStepperIdle = false;
+	engineConfiguration->isDoubleSolenoidIdle = false;
+	engineConfiguration->idle.solenoidPin = Gpio::C6;
+	engineConfiguration->secondSolenoidPin = Gpio::Unassigned;
 	
 //CAN 1 bus overwrites
 	engineConfiguration->canRxPin = Gpio::D0;
