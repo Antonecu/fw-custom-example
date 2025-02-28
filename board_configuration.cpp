@@ -112,7 +112,7 @@ void setBoardDefaultConfiguration() {
 
 	engineConfiguration->enableSoftwareKnock = true;
 	engineConfiguration->cylindersCount = 4;
-	engineConfiguration->firingOrder = FO_1_2_4_3;
+	engineConfiguration->firingOrder = FO_1_3_4_2;
 
 	engineConfiguration->ignitionMode = IM_WASTED_SPARK;
 	engineConfiguration->crankingInjectionMode = IM_SIMULTANEOUS;
