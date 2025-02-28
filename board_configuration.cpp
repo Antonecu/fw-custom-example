@@ -21,9 +21,9 @@ static void setInjectorPins() {
 
 static void setIgnitionPins() {
 	engineConfiguration->ignitionPins[0] = Gpio::E8;
-	engineConfiguration->ignitionPins[1] = Gpio::E9;
-	engineConfiguration->ignitionPins[2] = Gpio::E10;
-	engineConfiguration->ignitionPins[3] = Gpio::E11;
+	engineConfiguration->ignitionPins[1] = Gpio::Unassigned;
+	engineConfiguration->ignitionPins[2] = Gpio::E9;
+	engineConfiguration->ignitionPins[3] = Gpio::Unassigned;
 }
 
 static void setSensorPins() {
@@ -43,34 +43,7 @@ static void setSensorPins() {
 	engineConfiguration->lps25BaroSensorScl = Gpio::B10;
 	engineConfiguration->lps25BaroSensorSda = Gpio::B11;
 //	engineConfiguration->baroSensor.type = MT_MPXH6400;
-//    	engineConfiguration->baroSensor.hwChannel = EFI_ADC_15;
-}
-
-static void setEtbConfig() {
-	// TLE9201 driver
-	// This chip has three control pins:
-	// DIR - sets direction of the motor
-	// PWM - pwm control (enable high, coast low)
-	// DIS - disables motor (enable low)
-
-	// Throttle #1
-	// PWM pin
-	engineConfiguration->etbIo[0].controlPin = Gpio::Unassigned;
-	// DIR pin
-	engineConfiguration->etbIo[0].directionPin1 = Gpio::Unassigned;
-	// Disable pin
-	engineConfiguration->etbIo[0].disablePin = Gpio::Unassigned;
-
-	// Throttle #2
-	// PWM pin
-	engineConfiguration->etbIo[1].controlPin = Gpio::Unassigned;
-	// DIR pin
-	engineConfiguration->etbIo[1].directionPin1 = Gpio::Unassigned;
-	// Disable pin
-	engineConfiguration->etbIo[1].disablePin = Gpio::Unassigned;
-
-	// we only have pwm/dir, no dira/dirb
-	engineConfiguration->etb_use_two_wires = false;
+//    	engineConfiguration->baroSensor.hwChannel = EFI_ADC_8;
 }
 
 static void setupVbatt() {
@@ -96,19 +69,27 @@ static void setSdCardSpi3() {
 	engineConfiguration->sdCardCsPin = Gpio::D2;
 }
 
+static void setSdCardSDIO() {
+	#undef EFI_SDC_DEVICE
+	#define EFI_SDC_DEVICE SDCD1
+        palSetPadMode(GPIOC, 11, PAL_MODE_ALTERNATE(12U));
+	palSetPadMode(GPIOD, 2, PAL_MODE_ALTERNATE(12U));
+	palSetPadMode(GPIOC, 12, PAL_MODE_ALTERNATE(12U));
+	palSetPadMode(GPIOC, 8, PAL_MODE_ALTERNATE(12U));
+	palSetPadMode(GPIOC, 9, PAL_MODE_ALTERNATE(12U));
+	palSetPadMode(GPIOC, 10, PAL_MODE_ALTERNATE(12U));
+}
+
 // board-specific configuration setup
 void setBoardDefaultConfiguration() {
 	setInjectorPins();
-//	setIgnitionPins();
+	setIgnitionPins();
 	setSensorPins();
-	setEtbConfig();
 	setupVbatt();
-	setSdCardSpi3();
+	setSdCardSDIO();
 	
 	engineConfiguration->clt.config.bias_resistor = 2490;
 	engineConfiguration->iat.config.bias_resistor = 2490;
-
-	engineConfiguration->globalTriggerAngleOffset = 0;
 
 	engineConfiguration->enableSoftwareKnock = true;
 	engineConfiguration->cylindersCount = 4;
@@ -117,6 +98,11 @@ void setBoardDefaultConfiguration() {
 	engineConfiguration->ignitionMode = IM_WASTED_SPARK;
 	engineConfiguration->crankingInjectionMode = IM_SIMULTANEOUS;
 	engineConfiguration->injectionMode = IM_SEQUENTIAL;
+	engineConfiguration->globalTriggerAngleOffset = -85;
+	engineConfiguration->displacement = 1.596;
+	engineConfiguration->injector.flow = 165;
+        engineConfiguration->cranking.baseFuel = 25;
+	engineConfiguration->cranking.rpm = 400;
 	
 //Digital Input
 	engineConfiguration->acSwitch = Gpio::E7;
