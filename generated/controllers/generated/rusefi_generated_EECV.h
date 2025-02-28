@@ -1382,7 +1382,7 @@
 #define show_tcu_gauges true
 #define show_test_presets true
 #define show_vvt_output_pin true
-#define SIGNATURE_HASH 1744669580
+#define SIGNATURE_HASH 341777668
 #define SIMULATOR_TUNE_BIN_FILE_NAME "generated/simulator_tune_image.bin"
 #define SIMULATOR_TUNE_BIN_FILE_NAME_PREFIX "generated/simulator_tune_image"
 #define SIMULATOR_TUNE_BIN_FILE_NAME_SUFFIX ".bin"
@@ -1697,7 +1697,7 @@
 #define ts_show_air_conditioning true
 #define ts_show_alternator true
 #define ts_show_analog_diag false
-#define ts_show_analog_divider true
+#define ts_show_analog_divider false
 #define ts_show_analog_ego true
 #define ts_show_analog_input_settings true
 #define ts_show_aux_connections true
@@ -1710,11 +1710,11 @@
 #define ts_show_cam2 true
 #define ts_show_can2 false
 #define ts_show_can_bitrate true
-#define ts_show_can_pins true
+#define ts_show_can_pins false
 #define ts_show_can_wbo true
 #define ts_show_charge_estimation true
 #define ts_show_check_engine false
-#define ts_show_clt_iat_pullup true
+#define ts_show_clt_iat_pullup false
 #define ts_show_clutch_down true
 #define ts_show_clutch_down_pin true
 #define ts_show_clutch_up true
@@ -1743,7 +1743,7 @@
 #define ts_show_etb_bias_curve true
 #define ts_show_etb_extra_monitoring 
 #define ts_show_etb_frequency true
-#define ts_show_etb_pins false
+#define ts_show_etb_pins true
 #define ts_show_exhaust_vvt true
 #define ts_show_experimental true
 #define ts_show_fan2_settings true
@@ -1778,7 +1778,7 @@
 #define ts_show_fuel_trims true
 #define ts_show_full_pinout true
 #define ts_show_gdi false
-#define ts_show_gdi_low_level true
+#define ts_show_gdi_low_level false
 #define ts_show_globalTriggerAngleOffset true
 #define ts_show_hardware_simulator false
 #define ts_show_hbridge_function true
@@ -1819,7 +1819,7 @@
 #define ts_show_reset_calibrations true
 #define ts_show_rotary true
 #define ts_show_sd_card true
-#define ts_show_sd_pins true
+#define ts_show_sd_pins false
 #define ts_show_second_bank true
 #define ts_show_sent true
 #define ts_show_software_knock true
@@ -1857,10 +1857,10 @@
 #define ts_show_trigger_overrides true
 #define ts_show_trigger_pins true
 #define ts_show_tsp_pps_limits true
-#define ts_show_tunerstudio_port true
+#define ts_show_tunerstudio_port false
 #define ts_show_useRunningMathForCranking true
 #define ts_show_useSeparateVeForIdle true
-#define ts_show_vbatt true
+#define ts_show_vbatt false
 #define ts_show_ve_blend true
 #define ts_show_veBlends2 true
 #define ts_show_veBlends3 true
@@ -1874,7 +1874,7 @@
 #define ts_show_wastegate_sensor true
 #define ts_show_wbo_canbus_index true
 #define ts_show_wbo_canbus_set_index true
-#define TS_SIGNATURE "rusEFI main.2025.02.28.EECV.1744669580"
+#define TS_SIGNATURE "rusEFI main.2025.02.28.EECV.341777668"
 #define TS_SIMULATE_CAN '>'
 #define TS_SIMULATE_CAN_char >
 #define TS_SINGLE_WRITE_COMMAND 'W'
