@@ -1,6 +1,16 @@
+/**
+ * @file board_configuration.h
+ *
+ * @brief In this file we can override engine_configuration.cpp.
+ *
+ * @date Feb 06, 2021
+ * @author Andrey Gusakov, 2021
+ */
+
 #include "pch.h"
 #include "smart_gpio.h"
-
+#include "drivers/gpio/mc33810.h"
+#include "device_mpu_util.h"
 Gpio getCommsLedPin() {
 	return Gpio::Unassigned;
 }
