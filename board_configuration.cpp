@@ -1,4 +1,5 @@
 #include "pch.h"
+#include "smart_gpio.h"
 
 Gpio getCommsLedPin() {
 	return Gpio::Unassigned;
@@ -119,5 +120,6 @@ void setBoardDefaultConfiguration() {
 	engineConfiguration->max31855spiDevice = SPI_DEVICE_2;
 
 //SD card is located on SDIO interface
-	engineConfiguration->isSdCardEnabled = true;	
+	engineConfiguration->isSdCardEnabled = true;
+	engineConfiguration->sdCardCsPin = Gpio::Unassigned;
 }
