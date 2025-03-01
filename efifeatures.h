@@ -1,10 +1,5 @@
 /**
- * @file fw-custom-EECV/efifeatures.h
- *
- * @brief In this header we can override efifeatures.h.
- *
- * @date Feb 06, 2021
- * @author Andrey Gusakov, 2021
+ * @file efifeatures.h
  */
 
 #pragma once
