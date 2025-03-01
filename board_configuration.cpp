@@ -118,7 +118,7 @@ void setBoardDefaultConfiguration() {
 	engineConfiguration->max31855_cs[0] = Gpio::B12;
 	engineConfiguration->max31855spiDevice = SPI_DEVICE_2;
 
-//SD card is located on SDIO interface */
+//SD card is located on SDIO interface
 	engineConfiguration->isSdCardEnabled = true;	
         palSetPadMode(GPIOC, 11, PAL_MODE_ALTERNATE(12U));
 	palSetPadMode(GPIOD, 2, PAL_MODE_ALTERNATE(12U));
