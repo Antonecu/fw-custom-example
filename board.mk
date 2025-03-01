@@ -6,6 +6,9 @@ BOARDINC += $(BOARD_DIR)/generated/controllers/generated
 # board.c from this directory
 BOARD_C = $(BOARD_DIR)/board.c
 
+#Mass Storage
+DDEFS += -DEFI_EMBED_INI_MSD=TRUE
+
 # Shared variables
 ALLINC    += $(BOARDINC)
 
