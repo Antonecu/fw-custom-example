@@ -6,10 +6,10 @@
  */
 
 #include "hal.h"
-#include "stm32_gpio.h"
+//#include "stm32_gpio.h"
 #include "unused.h"
 
-#include "board_io.h"
+#include "board.h"
 
 /* drivers */
 
