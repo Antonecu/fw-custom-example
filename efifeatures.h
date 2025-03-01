@@ -6,6 +6,7 @@
 
 #include "../../stm32f7ems/efifeatures.h"
 
+#define EFI_FILE_LOGGING     TRUE
 #define EFI_SDC_DEVICE				SDCD2
 
 #undef EFI_UART_GPS
