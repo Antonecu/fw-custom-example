@@ -1,5 +1,5 @@
 /**
- * @file boards/subaru_eg33/efifeatures.h
+ * @file fw-custom-EECV/efifeatures.h
  *
  * @brief In this header we can override efifeatures.h.
  *
