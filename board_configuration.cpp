@@ -120,10 +120,4 @@ void setBoardDefaultConfiguration() {
 
 //SD card is located on SDIO interface
 	engineConfiguration->isSdCardEnabled = true;	
-        palSetPadMode(GPIOC, 11, PAL_MODE_ALTERNATE(12U));
-	palSetPadMode(GPIOD, 2, PAL_MODE_ALTERNATE(12U));
-	palSetPadMode(GPIOC, 12, PAL_MODE_ALTERNATE(12U));
-	palSetPadMode(GPIOC, 8, PAL_MODE_ALTERNATE(12U));
-	palSetPadMode(GPIOC, 9, PAL_MODE_ALTERNATE(12U));
-	palSetPadMode(GPIOC, 10, PAL_MODE_ALTERNATE(12U));
 }
