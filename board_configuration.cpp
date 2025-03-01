@@ -59,24 +59,12 @@ static void setupVbatt() {
 	engineConfiguration->adcVcc = 3.3f;
 }
 
-static void setSdCardSDIO() {
-	#undef EFI_SDC_DEVICE
-	#define EFI_SDC_DEVICE SDCD1
-        palSetPadMode(GPIOC, 11, PAL_MODE_ALTERNATE(12U));
-	palSetPadMode(GPIOD, 2, PAL_MODE_ALTERNATE(12U));
-	palSetPadMode(GPIOC, 12, PAL_MODE_ALTERNATE(12U));
-	palSetPadMode(GPIOC, 8, PAL_MODE_ALTERNATE(12U));
-	palSetPadMode(GPIOC, 9, PAL_MODE_ALTERNATE(12U));
-	palSetPadMode(GPIOC, 10, PAL_MODE_ALTERNATE(12U));
-}
-
-// board-specific configuration setup
+//Board-specific configuration setup
 void setBoardDefaultConfiguration() {
 	setInjectorPins();
 	setIgnitionPins();
 	setSensorPins();
 	setupVbatt();
-	setSdCardSDIO();
 	
 	engineConfiguration->clt.config.bias_resistor = 2490;
 	engineConfiguration->iat.config.bias_resistor = 2490;
@@ -112,7 +100,7 @@ void setBoardDefaultConfiguration() {
 	engineConfiguration->vvtPins[0] = Gpio::Unassigned;
 	engineConfiguration->vvtPins[1] = Gpio::Unassigned;
 
-// Idle configuration
+//Idle configuration
 	engineConfiguration->useStepperIdle = false;
 	engineConfiguration->isDoubleSolenoidIdle = false;
 	engineConfiguration->idle.solenoidPin = Gpio::C6;
@@ -122,7 +110,7 @@ void setBoardDefaultConfiguration() {
 	engineConfiguration->canRxPin = Gpio::D0;
 	engineConfiguration->canTxPin = Gpio::D1;
 
-// SPI2 for on-board EGT
+//SPI2 for on-board EGT
 	engineConfiguration->is_enabled_spi_2 = true;
 	// MOSI not needed, we have one-way communication here
 	engineConfiguration->spi2misoPin = Gpio::B14;
@@ -130,3 +118,12 @@ void setBoardDefaultConfiguration() {
 	engineConfiguration->max31855_cs[0] = Gpio::B12;
 	engineConfiguration->max31855spiDevice = SPI_DEVICE_2;
 }
+
+//SD card is located on SDIO interface */
+	engineConfiguration->isSdCardEnabled = true;	
+        palSetPadMode(GPIOC, 11, PAL_MODE_ALTERNATE(12U));
+	palSetPadMode(GPIOD, 2, PAL_MODE_ALTERNATE(12U));
+	palSetPadMode(GPIOC, 12, PAL_MODE_ALTERNATE(12U));
+	palSetPadMode(GPIOC, 8, PAL_MODE_ALTERNATE(12U));
+	palSetPadMode(GPIOC, 9, PAL_MODE_ALTERNATE(12U));
+	palSetPadMode(GPIOC, 10, PAL_MODE_ALTERNATE(12U));
