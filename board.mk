@@ -3,16 +3,6 @@ BOARDCPPSRC =  $(BOARD_DIR)/board_configuration.cpp \
 
 BOARDINC += $(BOARD_DIR)/generated/controllers/generated
 
-# List of all the board related files.
-#BOARDSRC = $(BOARD_DIR)/../board.c
-#BOARDINC += $(BOARD_DIR)/..
-
-#Mass Storage
-#DDEFS += -DEFI_EMBED_INI_MSD=TRUE
-
-# Shared variables
-#ALLINC    += $(BOARDINC)
-
 # defines SHORT_BOARD_NAME
 include $(BOARD_DIR)/meta-info.env
 
