@@ -250,6 +250,13 @@
 
 /*
  * GPIOC setup:
+ *
+ * PC8  - MMC D0
+ * PC9 - MMC D1
+ * PC10 - MMC D2
+ * PC11 - MMC D3
+ * PC12  - MMC clk
+ *
  */
 #define VAL_GPIOC_MODER             (EFI_PIN_MODE_DEFAULT(0) |           \
                                      EFI_PIN_MODE_DEFAULT(1) |           \
@@ -269,7 +276,22 @@
                                      EFI_PIN_MODE_DEFAULT(15))
 #define VAL_GPIOC_OTYPER            VAL_GPIO_OTYPER_ALL_DEFAULT
 #define VAL_GPIOC_OSPEEDR           VAL_GPIO_OSPEEDR_ALL_DEFAULT
-#define VAL_GPIOC_PUPDR             VAL_GPIO_PUPDR_ALL_DEFAULT
+#define VAL_GPIOC_PUPDR             (EFI_DR_DEFAULT(0) |        \
+                                     EFI_DR_DEFAULT(1) |       \
+                                     EFI_DR_DEFAULT(2) |       \
+                                     EFI_DR_DEFAULT(3) |       \
+                                     EFI_DR_DEFAULT(4) |       \
+                                     EFI_DR_DEFAULT(5) |       \
+                                     EFI_DR_DEFAULT(6) |       \
+                                     EFI_DR_DEFAULT(7) |       \
+                                     PIN_PUPDR_PULLUP(8) |       \
+                                     PIN_PUPDR_PULLUP(9) |       \
+                                     PIN_PUPDR_PULLUP(10) |      \
+                                     PIN_PUPDR_PULLUP(11) |      \
+                                     PIN_PUPDR_PULLUP(12) |      \
+                                     EFI_DR_DEFAULT(13) |      \
+                                     EFI_DR_DEFAULT(14) |      \
+                                     EFI_DR_DEFAULT(15))
 #define VAL_GPIOC_ODR               VAL_GPIO_ODR_ALL_DEFAULT
 #define VAL_GPIOC_AFRL              VAL_GPIO_AF_ALL_DEFAULT
 #define VAL_GPIOC_AFRH            (PIN_AFIO_AF(8, 11U) |          \
@@ -282,7 +304,10 @@
                                    PIN_AFIO_AF(15, 0U))
 
 /*
+ *
  * GPIOD setup:
+ * PD2  - MMC cmd
+ *
  */
 #define VAL_GPIOD_MODER             (EFI_PIN_MODE_DEFAULT(0) |           \
                                      EFI_PIN_MODE_DEFAULT(1) |           \
@@ -302,7 +327,22 @@
                                      EFI_PIN_MODE_DEFAULT(15))
 #define VAL_GPIOD_OTYPER            VAL_GPIO_OTYPER_ALL_DEFAULT
 #define VAL_GPIOD_OSPEEDR           VAL_GPIO_OSPEEDR_ALL_DEFAULT
-#define VAL_GPIOD_PUPDR             VAL_GPIO_PUPDR_ALL_DEFAULT
+#define VAL_GPIOD_PUPDR             (EFI_DR_DEFAULT(0) |        \
+                                     EFI_DR_DEFAULT(1) |       \
+                                     PIN_PUPDR_FLOATING(2) |       \
+                                     EFI_DR_DEFAULT(3) |       \
+                                     EFI_DR_DEFAULT(4) |       \
+                                     EFI_DR_DEFAULT(5) |       \
+                                     EFI_DR_DEFAULT(6) |       \
+                                     EFI_DR_DEFAULT(7) |       \
+                                     EFI_DR_DEFAULT(8) |       \
+                                     EFI_DR_DEFAULT(9) |       \
+                                     EFI_DR_DEFAULT(10) |      \
+                                     EFI_DR_DEFAULT(11) |      \
+                                     EFI_DR_DEFAULT(12) |      \
+                                     EFI_DR_DEFAULT(13) |      \
+                                     EFI_DR_DEFAULT(14) |      \
+                                     EFI_DR_DEFAULT(15))
 #define VAL_GPIOD_ODR               VAL_GPIO_ODR_ALL_DEFAULT
 #define VAL_GPIOD_AFRL            (PIN_AFIO_AF(0, 0U) |          \
                                    PIN_AFIO_AF(1, 0U) |          \
