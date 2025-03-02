@@ -20,8 +20,7 @@
  */
 
 #include "hal.h"
-#include "hal_community.h"
-#include "hal_sdram_lld.h"
+
 #include "unused.h"
 
 #include "board.h"
@@ -260,11 +259,3 @@ bool mmc_lld_is_write_protected(MMCDriver *mmcp) {
   return false;
 }
 #endif
-
-/**
- * @brief   Board-specific initialization code.
- * @note    You can add your board-specific code here.
- */
-void boardInit(void) {
-
-}
