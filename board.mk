@@ -7,14 +7,11 @@ BOARDINC += $(BOARD_DIR)/generated/controllers/generated
 BOARDSRC = $(BOARD_DIR)/../board.c
 BOARDINC += $(BOARD_DIR)/..
 
-# board.c from this directory
-# BOARD_C = $(BOARD_DIR)/board.c
-
 #Mass Storage
-DDEFS += -DEFI_EMBED_INI_MSD=TRUE
+#DDEFS += -DEFI_EMBED_INI_MSD=TRUE
 
 # Shared variables
-ALLINC    += $(BOARDINC)
+#ALLINC    += $(BOARDINC)
 
 # defines SHORT_BOARD_NAME
 include $(BOARD_DIR)/meta-info.env
