@@ -28,7 +28,7 @@
 #ifndef HALCONF_EECV_H
 #define HALCONF_EECV_H
 
-#include "../../../hw_layer/ports/stm32/stm32f4/cfg/halconf.h"
+//#include "../../../hw_layer/ports/stm32/stm32f4/cfg/halconf.h"
 
 /**
 * @brief   Enables the SDC subsystem.
