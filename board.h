@@ -294,11 +294,11 @@
                                      EFI_DR_DEFAULT(15))
 #define VAL_GPIOC_ODR               VAL_GPIO_ODR_ALL_DEFAULT
 #define VAL_GPIOC_AFRL              VAL_GPIO_AF_ALL_DEFAULT
-#define VAL_GPIOC_AFRH            (PIN_AFIO_AF(8, 11U) |          \
-                                   PIN_AFIO_AF(9, 11U) |          \
-                                   PIN_AFIO_AF(10, 10U) |          \
-                                   PIN_AFIO_AF(11, 11U) |          \
-                                   PIN_AFIO_AF(12, 11U) |          \
+#define VAL_GPIOC_AFRH            (PIN_AFIO_AF(8, 12U) |          \
+                                   PIN_AFIO_AF(9, 12U) |          \
+                                   PIN_AFIO_AF(10, 12U) |          \
+                                   PIN_AFIO_AF(11, 12U) |          \
+                                   PIN_AFIO_AF(12, 12U) |          \
                                    PIN_AFIO_AF(13, 0U) |          \
                                    PIN_AFIO_AF(14, 0U) |          \
                                    PIN_AFIO_AF(15, 0U))
@@ -346,7 +346,7 @@
 #define VAL_GPIOD_ODR               VAL_GPIO_ODR_ALL_DEFAULT
 #define VAL_GPIOD_AFRL            (PIN_AFIO_AF(0, 0U) |          \
                                    PIN_AFIO_AF(1, 0U) |          \
-                                   PIN_AFIO_AF(2, 11U) |          \
+                                   PIN_AFIO_AF(2, 12U) |          \
                                    PIN_AFIO_AF(3, 0U) |          \
                                    PIN_AFIO_AF(4, 0U) |          \
                                    PIN_AFIO_AF(5, 0U) |          \
