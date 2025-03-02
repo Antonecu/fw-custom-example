@@ -1,9 +1,9 @@
 # List of all the board related files.
-BOARDSRC = $(BOARD_DIR)/board.c
+#BOARDSRC = $(BOARD_DIR)/board.c
 
 # Shared variables
-ALLCSRC += $(BOARDSRC)
-ALLINC  += $(BOARDINC)
+#ALLCSRC += $(BOARDSRC)
+#ALLINC  += $(BOARDINC)
 
 BOARDCPPSRC =  $(BOARD_DIR)/board_configuration.cpp \
     $(BOARD_DIR)/default_tune.cpp \
