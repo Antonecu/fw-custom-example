@@ -20,6 +20,10 @@
  */
 
 #include "hal.h"
+#include "hal_community.h"
+#include "hal_sdram_lld.h"
+#include "unused.h"
+
 #include "board.h"
 
 /*===========================================================================*/
