@@ -6,7 +6,7 @@
 
 //#include "../../stm32f4ems/efifeatures.h"
 
-#define EFI_SDC_DEVICE SDCD1
+//#define EFI_SDC_DEVICE SDCD1
 
 #undef EFI_RTC
 #define EFI_RTC FALSE
