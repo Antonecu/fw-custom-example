@@ -251,23 +251,67 @@
 /*
  * GPIOC setup:
  */
-#define VAL_GPIOC_MODER             VAL_GPIO_MODER_ALL_DEFAULT
+#define VAL_GPIOC_MODER             (EFI_PIN_MODE_DEFAULT(0) |           \
+                                     EFI_PIN_MODE_DEFAULT(1) |           \
+                                     EFI_PIN_MODE_DEFAULT(2) |           \
+                                     EFI_PIN_MODE_DEFAULT(3) |           \
+                                     EFI_PIN_MODE_DEFAULT(4) |         \
+                                     EFI_PIN_MODE_DEFAULT(5) |   \
+                                     EFI_PIN_MODE_DEFAULT(6) |           \
+                                     EFI_PIN_MODE_DEFAULT(7) |           \
+                                     PIN_MODE_ALTERNATE(8) |           \
+                                     PIN_MODE_ALTERNATE(9) |           \
+                                     PIN_MODE_ALTERNATE(10) |          \
+                                     PIN_MODE_ALTERNATE(11) |          \
+                                     PIN_MODE_ALTERNATE(12) |          \
+                                     EFI_PIN_MODE_DEFAULT(13) |          \
+                                     EFI_PIN_MODE_DEFAULT(14) |          \
+                                     EFI_PIN_MODE_DEFAULT(15))
 #define VAL_GPIOC_OTYPER            VAL_GPIO_OTYPER_ALL_DEFAULT
 #define VAL_GPIOC_OSPEEDR           VAL_GPIO_OSPEEDR_ALL_DEFAULT
 #define VAL_GPIOC_PUPDR             VAL_GPIO_PUPDR_ALL_DEFAULT
 #define VAL_GPIOC_ODR               VAL_GPIO_ODR_ALL_DEFAULT
 #define VAL_GPIOC_AFRL              VAL_GPIO_AF_ALL_DEFAULT
-#define VAL_GPIOC_AFRH              VAL_GPIO_AF_ALL_DEFAULT
+#define VAL_GPIOC_AFRH            (PIN_AFIO_AF(8, 11U) |          \
+                                   PIN_AFIO_AF(9, 11U) |          \
+                                   PIN_AFIO_AF(10, 10U) |          \
+                                   PIN_AFIO_AF(11, 11U) |          \
+                                   PIN_AFIO_AF(12, 11U) |          \
+                                   PIN_AFIO_AF(13, 0U) |          \
+                                   PIN_AFIO_AF(14, 0U) |          \
+                                   PIN_AFIO_AF(15, 0U))
 
 /*
  * GPIOD setup:
  */
-#define VAL_GPIOD_MODER             VAL_GPIO_MODER_ALL_DEFAULT
+#define VAL_GPIOD_MODER             (EFI_PIN_MODE_DEFAULT(0) |           \
+                                     EFI_PIN_MODE_DEFAULT(1) |           \
+                                     PIN_MODE_ALTERNATE(2) |           \
+                                     EFI_PIN_MODE_DEFAULT(3) |           \
+                                     EFI_PIN_MODE_DEFAULT(4) |         \
+                                     EFI_PIN_MODE_DEFAULT(5) |   \
+                                     EFI_PIN_MODE_DEFAULT(6) |           \
+                                     EFI_PIN_MODE_DEFAULT(7) |           \
+                                     EFI_PIN_MODE_DEFAULT(8) |           \
+                                     EFI_PIN_MODE_DEFAULT(9) |           \
+                                     EFI_PIN_MODE_DEFAULT(10) |          \
+                                     EFI_PIN_MODE_DEFAULT(11) |          \
+                                     EFI_PIN_MODE_DEFAULT(12) |          \
+                                     EFI_PIN_MODE_DEFAULT(13) |          \
+                                     EFI_PIN_MODE_DEFAULT(14) |          \
+                                     EFI_PIN_MODE_DEFAULT(15))
 #define VAL_GPIOD_OTYPER            VAL_GPIO_OTYPER_ALL_DEFAULT
 #define VAL_GPIOD_OSPEEDR           VAL_GPIO_OSPEEDR_ALL_DEFAULT
 #define VAL_GPIOD_PUPDR             VAL_GPIO_PUPDR_ALL_DEFAULT
 #define VAL_GPIOD_ODR               VAL_GPIO_ODR_ALL_DEFAULT
-#define VAL_GPIOD_AFRL              VAL_GPIO_AF_ALL_DEFAULT
+#define VAL_GPIOD_AFRL            (PIN_AFIO_AF(0, 0U) |          \
+                                   PIN_AFIO_AF(1, 0U) |          \
+                                   PIN_AFIO_AF(2, 11U) |          \
+                                   PIN_AFIO_AF(3, 0U) |          \
+                                   PIN_AFIO_AF(4, 0U) |          \
+                                   PIN_AFIO_AF(5, 0U) |          \
+                                   PIN_AFIO_AF(6, 0U) |          \
+                                   PIN_AFIO_AF(7, 0U))
 #define VAL_GPIOD_AFRH              VAL_GPIO_AF_ALL_DEFAULT
 
 /*
