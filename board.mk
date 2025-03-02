@@ -3,8 +3,12 @@ BOARDCPPSRC =  $(BOARD_DIR)/board_configuration.cpp \
 
 BOARDINC += $(BOARD_DIR)/generated/controllers/generated
 
+# List of all the board related files.
+BOARDSRC = $(BOARD_DIR)/../board.c
+BOARDINC += $(BOARD_DIR)/..
+
 # board.c from this directory
-BOARD_C = $(BOARD_DIR)/board.c
+# BOARD_C = $(BOARD_DIR)/board.c
 
 #Mass Storage
 DDEFS += -DEFI_EMBED_INI_MSD=TRUE
