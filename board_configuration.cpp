@@ -59,12 +59,24 @@ static void setupVbatt() {
 	engineConfiguration->adcVcc = 3.3f;
 }
 
+static void setupSdCard() {
+	engineConfiguration->isSdCardEnabled = true;
+	engineConfiguration->sdCardCsPin = Gpio::Unassigned;
+	engineConfiguration->sdCardSpiDevice = SPI_DEVICE_3;
+	engineConfiguration->sdCardCsPin = Gpio::D2;
+	engineConfiguration->is_enabled_spi_3 = true;
+	engineConfiguration->spi3sckPin = Gpio::C10;
+	engineConfiguration->spi3misoPin = Gpio::C11;
+	engineConfiguration->spi3mosiPin = Gpio::C12;
+}
+
 //Board-specific configuration setup
 void setBoardDefaultConfiguration() {
 	setInjectorPins();
 	setIgnitionPins();
 	setSensorPins();
 	setupVbatt();
+	setupSdCard();
 	
 	engineConfiguration->clt.config.bias_resistor = 2490;
 	engineConfiguration->iat.config.bias_resistor = 2490;
@@ -117,8 +129,4 @@ void setBoardDefaultConfiguration() {
 	engineConfiguration->spi2sckPin = Gpio::B13;
 	engineConfiguration->max31855_cs[0] = Gpio::B12;
 	engineConfiguration->max31855spiDevice = SPI_DEVICE_2;
-
-//SD card is located on SDIO interface
-	engineConfiguration->isSdCardEnabled = true;
-	engineConfiguration->sdCardCsPin = Gpio::Unassigned;
 }
