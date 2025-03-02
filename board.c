@@ -20,8 +20,7 @@
  */
 
 #include "hal.h"
-//#include "stm32_gpio.h"
-#include "board.h"
+#include "stm32_gpio.h"
 
 /*===========================================================================*/
 /* Driver local definitions.                                                 */
