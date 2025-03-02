@@ -1,3 +1,5 @@
+HALCONFDIR = $(BOARD_DIR)
+
 # List of all the board related files.
 BOARDSRC = $(BOARD_DIR)/board.c
 
