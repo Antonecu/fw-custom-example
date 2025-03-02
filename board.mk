@@ -1,3 +1,5 @@
+HALCONFDIR = $(BOARD_DIR)
+
 BOARDCPPSRC =  $(BOARD_DIR)/board_configuration.cpp \
     $(BOARD_DIR)/default_tune.cpp \
 
@@ -30,3 +32,8 @@ PRIMARY_COMMUNICATION_PORT_USART2=-DEFI_CONSOLE_TX_BRAIN_PIN=Gpio::D6 -DEFI_CONS
 DDEFS += -DWITH_LUA_CONSUMPTION=FALSE
 DDEFS += -DWITH_LUA_PID=FALSE
 DDEFS += -DWITH_LUA_STOP_ENGINE=FALSE
+
+# Required include directories
+# Shared variables
+# Add board's directory first in include dir list so files in board directory will be included instead of default
+ALLINC += $(BOARDINC)
